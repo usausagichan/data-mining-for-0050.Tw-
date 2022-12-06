@@ -11,3 +11,5 @@ scrape the portfolio data of 0050.TW from https://mops.twse.com.tw/mops/web/t78s
   append the data of Q3 for past few years in for loop. Finally the his dataframe will include Q3 data from 111-96 (ROC years)
   and be transformed into excel files(xlsx file) and save in your location.
   you may modify the code line 44,46,47 and change the year and season to your advantage.
+
+I use these data to build a dashboard for visualizing mainstream industry and company in Taiwan.
