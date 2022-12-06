@@ -39,11 +39,12 @@ def get_hist(year,season):
     print(data)
     return data
 
-his=get_hist('111','03')
+###main execution part####
+his=get_hist('111','03') # get_hist(year in your favor,season in your favor), note that the input should be strings
 his['year']=int(111+1911)*np.ones(his.shape[0]).astype(int)
 pd.to_datetime(his.year,format='%Y')
-for i in range(110,96,-1):
-    data=get_hist(str(i),'03')
+for i in range(110,96,-1): # the range of year
+    data=get_hist(str(i),'03') # you can change '03' into whatever season you want
     data['year']=int(i+1911)*np.ones(data.shape[0]).astype(int)
     pd.to_datetime(data.year,format='%Y')
     his=his.append(data,ignore_index=True)
